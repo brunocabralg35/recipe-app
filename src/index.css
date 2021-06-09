@@ -1,13 +1,204 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Squada+One&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+.logo{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  color: #272626;
+}
+
+.search-form{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-bar{
+  width: 50%;
+  border: 2px solid #2b2a2a;
+  border-top-left-radius: 15px;
+  text-align: center;
+}
+
+.search-bar:focus{
+  outline: none;
+}
+
+.search-btn{
+  box-sizing: border-box;
+  padding: 13px;
+  border: none;
+  background-color: #2b2a2a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-btn:hover{
+  background-color: #774040;
+}
+
+.Recipes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.RecipeBox{
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 400px;
+  height: 330px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px black;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background-color: #eaeaea;
+}
+
+.RecipeBox:hover{
+  box-shadow: 15px 15px 30px black;
+}
+
+.FoodPic{
+  border-radius: 50%;
+  width: 180px;
+  border: 6px solid rgb(39, 38, 38);
+  margin-bottom: 5px;
+}
+
+.FoodTitle{
+  font-family: "Squada One", Arial, Helvetica, sans-serif;
+  letter-spacing: 0.5px;
+  color: #2b2a28;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.FoodCalories{
+  margin-bottom: 5px;
+}
+
+/* CSS do FOOD.JS */
+
+.FoodApp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.FoodBox{
+  background-color: #eaeaea;
+  max-width: 60vw;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+
+  border-radius: 15px;
+  box-shadow: 3px 3px 15px black;
+}
+
+.img{
+  display: flex;
+  align-self: center;
+  width: 300px;
+  height: 300px;
+  background-color: #774040;
+  border-radius: 50%;
+  border: 6px solid rgb(39, 38, 38);
+  margin-bottom: 20px;
+}
+
+.FdTitle{
+  display: flex;
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+.FdDescription{
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.ingredientsBox{
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.IngTitle{
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.ingredientsBox li{
+  margin-bottom: 5px;
+}
+
+.search-any{
+  margin-top: 20px;
+  color: #2b2a2a;
+}
+
+.menu-btn{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  box-sizing: border-box;
+  padding: 13px;
+  width: 30vw;
+  border: none;
+  background-color: #2b2a2a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  border-radius: 10px;
+}
+
+.menu-btn:hover{
+  background-color: #774040;
+}
+
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  animation: rot 1s linear infinite;
+}
+
+.loading-home{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  animation: rot 1s linear infinite;
+}
+
+@keyframes rot{
+  from{transform: rotate(0);}
+  to{transform: rotate(360deg);}
 }
